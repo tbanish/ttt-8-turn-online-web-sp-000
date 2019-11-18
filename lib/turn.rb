@@ -1,3 +1,4 @@
+
 board = ["   ", "   ", "   ", "   ", "   ", "   ", "   ", "   ", "   "]
 
 def display_board(board)
@@ -15,4 +16,15 @@ def valid_move?(board, index)
   else position_taken?(board, index) == true
     false
   end
+end
+
+
+user_input = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
+def input_to_index(user_input)
+  user_input.to_i - 1
+end
+
+def move(board, user_input, char="X")
+  board[user_input] = char
 end
